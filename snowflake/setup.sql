@@ -14,6 +14,8 @@ CREATE DATABASE IF NOT EXISTS jaffle_shop;
 
 CREATE SCHEMA IF NOT EXISTS jaffle_shop.raw;
 
+CREATE SCHEMA IF NOT EXISTS jaffle_shop.dbt_mhndra;
+
 
 /* Create tables */
 

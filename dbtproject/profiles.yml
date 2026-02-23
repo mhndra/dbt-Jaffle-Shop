@@ -1,0 +1,10 @@
+dbtproject:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: sysadmin
+      warehouse: compute_wh
+      database: jaffle_shop
+      schema: dbt_mhndra
+  
