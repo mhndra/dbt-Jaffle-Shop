@@ -2,4 +2,4 @@ SELECT
     id AS customer_id,
     first_name,
     last_name
-FROM jaffle_shop.raw.customers
+FROM {{ source('raw', 'customers') }}
