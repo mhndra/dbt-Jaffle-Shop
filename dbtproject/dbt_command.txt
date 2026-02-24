@@ -1,0 +1,17 @@
+dbt compile --profiles-dir ~/.dbt/
+
+dbt source freshness --profiles-dir ~/.dbt/
+
+dbt deps
+
+dbt run-operation generate_source --args '{"database_name": "jaffle_shop", "schema_name": "raw"}' --profiles-dir ~/.dbt/
+
+dbt run-operation generate_base_model --args '{"source_name": "raw", "table_name": "customers"}' --profiles-dir ~/.dbt/
+
+dbt test --select stg_stripe_payments --profiles-dir ~/.dbt/
+
+dbt test --select source:raw --profiles-dir ~/.dbt/
+
+dbt test --select source:*
+
+dbt build --profiles-dir ~/.dbt/

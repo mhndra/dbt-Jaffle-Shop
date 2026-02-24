@@ -14,6 +14,7 @@ WITH orders AS (
     SELECT
         o.order_id,
         o.customer_id,
+        o.order_date,
         COALESCE(op.amount, 0) AS amount
     FROM orders o
     LEFT JOIN order_payments op

@@ -1,9 +1,9 @@
 WITH orders AS (
     SELECT *
-    FROM {{ref('stg_orders')}}
+    FROM {{ ref('fact_orders') }}
 ), customers AS (
     SELECT *
-    FROM {{ref('stg_customers')}}
+    FROM {{ ref('stg_customers') }}
 ), customer_orders AS (
     SELECT
         customer_id,
