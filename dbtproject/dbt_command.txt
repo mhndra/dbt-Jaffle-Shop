@@ -15,3 +15,17 @@ dbt test --select source:raw --profiles-dir ~/.dbt/
 dbt test --select source:*
 
 dbt build --profiles-dir ~/.dbt/
+
+dbt build --select stg_stripe_payments --profiles-dir ~/.dbt/ --no-partial-parse
+
+dbt clean
+
+dbt deps
+
+dbt parse
+
+dbt ls --select stg_stripe_payments+ --profiles-dir ~/.dbt/
+
+dbt docs generate --profiles-dir ~/.dbt/
+
+dbt docs serve --profiles-dir ~/.dbt/
